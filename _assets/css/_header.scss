@@ -3,13 +3,14 @@
 header {
 
     &.container {
+        align-items: stretch;
         box-sizing: border-box;
         display: flex;
-        flex-direction: column;
         gap: 16px;
+        height: 100px;
+        justify-content: flex-start;
         margin: auto;
         max-width: $max-content;
-        height: 100%;
         padding: 24px;
         width: 100%;
 
@@ -37,8 +38,39 @@ header {
 
         nav {
             display: flex;
+            flex-grow: 1;
             gap: 16px;
+            justify-content: flex-end;
+
+            a {
+                align-content: center;
+                color: $color-black;
+                font-family: $font-inter;
+                font-size: 16px;
+                font-weight: 300;
+                padding: 0 8px;
+                position: relative;
+                text-decoration: none;
+
+                &::before {
+                    background: $color-black;
+                    bottom: 0px;
+                    content: '';
+                    display: block;
+                    height: 2px;
+                    left: 0;
+                    position: absolute;
+                    transition: all .3s;
+                    width: 0%;
+                }
+
+                &:hover {
+                    &::before {
+                        width: 100%;
+                    }
+                }
+           
+            }
         }
     }
 }
-
