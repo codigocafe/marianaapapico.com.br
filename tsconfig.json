@@ -21,7 +21,11 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "paths": {
+      "@/components/*" : ["./_components/*"],
+      "@/assets/*" : ["./_assets/*"],
+    }
   },
   "include": [
     "next-env.d.ts",
