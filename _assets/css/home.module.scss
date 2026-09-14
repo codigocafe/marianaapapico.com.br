@@ -1,0 +1,9 @@
+@use '_mixin' as *;
+
+.container {
+    @include container;
+}
+
+.wrapper {
+    @include wrapper;
+}

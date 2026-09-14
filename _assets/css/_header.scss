@@ -1,0 +1,44 @@
+@use '_variables' as *;
+
+header {
+
+    &.container {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin: auto;
+        max-width: $max-content;
+        height: 100%;
+        padding: 24px;
+        width: 100%;
+
+        .top {
+            align-items: center;
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+
+            img {
+                height: 24px;
+            }
+
+            h1 {
+                border-left: solid 2px $color-black;
+                color: $color-black;
+                font-family: $font-brasilero;
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0 0 0 16px;
+                text-transform: lowercase;
+            }
+        }
+
+        nav {
+            display: flex;
+            gap: 16px;
+        }
+    }
+}
+
