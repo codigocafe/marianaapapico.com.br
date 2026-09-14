@@ -12,7 +12,7 @@ const epiloque = Epilogue({
 const inter = Inter({
     subsets: ['latin'],
     variable: '--font-inter',
-    weight: ['500','700']
+    weight: ['300', '500','700']
 })
 
 const brasileiro = localFont({
