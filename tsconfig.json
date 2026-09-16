@@ -23,8 +23,7 @@
       }
     ],
     "paths": {
-      "@/components/*" : ["./_components/*"],
-      "@/assets/*" : ["./_assets/*"],
+      "@/*": [ "./src/*" ],
     }
   },
   "include": [
