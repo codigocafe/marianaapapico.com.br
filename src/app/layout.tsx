@@ -3,6 +3,9 @@ import localFont from 'next/font/local'
 
 import '@/_assets/css/main.scss'
 
+import Header from "@/_components/header"
+import Footer from "@/_components/footer"
+
 const epiloque = Epilogue({
     subsets: ['latin'],
     variable: '--font-epilogue',
@@ -32,7 +35,9 @@ const RootLayout = (
             data-qb-installed="true"
         >
             <body className={`${epiloque.variable} ${inter.variable} ${brasileiro.variable}`}>
+                <Header />
                 {children}
+                <Footer />
             </body>
         </html>
     )
