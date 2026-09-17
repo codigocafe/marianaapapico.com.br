@@ -1,12 +1,12 @@
 import { Epilogue, Inter } from 'next/font/google'
 import localFont from 'next/font/local'
 
-import '@/assets/css/main.scss'
+import '@/_assets/css/main.scss'
 
 const epiloque = Epilogue({
     subsets: ['latin'],
     variable: '--font-epilogue',
-    weight: ['500', '700']
+    weight: ['300', '500', '700']
 })
 
 const inter = Inter({

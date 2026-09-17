@@ -7,13 +7,9 @@ const Header = () => {
             <header className="container">
                 <div className="top">
                     <Image alt="Logo da Mariana Apapico" src="/images/logo.png" width={80} height={24} />
-                    <h1>@Mariana_Apapico</h1>
+                    <Link href="/">@Mariana_Apapico</Link>
                 </div>
-                <nav>
-                    <Link href='/'>Início</Link>
-                    <Link href='/sobre-a-artista'>Sobre mim</Link>
-                    <Link href='/meus-links'>Meus links</Link>
-                </nav>
+                <nav></nav>
             </header>
         </>
     )

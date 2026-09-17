@@ -1,0 +1,33 @@
+@use '_variables' as *;
+@use '_mixin' as *;
+
+.container {
+    @include container;
+}
+
+.wrapper {
+    @include wrapper;
+    flex-direction: column;
+}
+
+.frames {
+    display: flex;
+    gap: 24px;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.title {
+    opacity: .1;
+    font-size: 124px;
+    line-height: 1;
+    margin: 0;
+    padding: 64px 32px 96px;
+    transition: opacity .2s ease-in-out;
+    font-family: $font-epilogue;
+    font-weight: 500;
+
+    &:hover {
+        opacity: .2;
+    }
+}

@@ -24,7 +24,7 @@ header {
                 height: 24px;
             }
 
-            h1 {
+            a {
                 border-left: solid 2px $color-black;
                 color: $color-black;
                 font-family: $font-brasilero;
@@ -32,6 +32,7 @@ header {
                 font-weight: 500;
                 margin: 0;
                 padding: 0 0 0 16px;
+                text-decoration: none;
                 text-transform: lowercase;
             }
         }
@@ -45,22 +46,23 @@ header {
             a {
                 align-content: center;
                 color: $color-black;
-                font-family: $font-inter;
+                cursor: pointer;
+                font-family: $font-epilogue;
                 font-size: 16px;
-                font-weight: 300;
+                font-weight: 700;
                 padding: 0 8px;
                 position: relative;
                 text-decoration: none;
 
                 &::before {
                     background: $color-black;
-                    bottom: 0px;
+                    bottom: 4px;
                     content: '';
                     display: block;
-                    height: 2px;
+                    height: 4px;
                     left: 0;
                     position: absolute;
-                    transition: all .3s;
+                    transition: all .2s;
                     width: 0%;
                 }
 
