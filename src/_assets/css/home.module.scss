@@ -20,6 +20,8 @@
 }
 
 .title {
+    background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    background-clip: text;
     border-left: 4px solid $color-black;
     font-family: $font-epilogue;
     font-size: 92px;
@@ -27,16 +29,13 @@
     letter-spacing: 3px;
     line-height: 1.05;
     margin: 0 32px;
-    opacity: .1;
+    opacity: .7;
     padding: 86px 18% 86px 64px;
-    transition: all .2s ease-in-out;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
 
     &:hover {
-        background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
-        background-clip: text;
         cursor: pointer;
-        opacity: .7;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
     }
 }
