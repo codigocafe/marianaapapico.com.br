@@ -1,26 +1,10 @@
-import { Epilogue, Inter } from 'next/font/google'
-import localFont from 'next/font/local'
+import { Fonts } from '@/_inc/fonts'
 
 import '@/_assets/css/main.scss'
 
-const epiloque = Epilogue({
-    subsets: ['latin'],
-    variable: '--font-epilogue',
-    weight: ['300', '500', '700']
-})
+import Header from "@/_components/header"
+import Footer from "@/_components/footer"
 
-const inter = Inter({
-    subsets: ['latin'],
-    variable: '--font-inter',
-    weight: ['300', '500','700']
-})
-
-const brasileiro = localFont({
-    variable: '--font-brasileiro',
-    src:[
-        {path: '../_assets/fonts/Brasilero2018Free.otf', style: 'normal'}
-    ]
-})
 
 const RootLayout = (
     { children }: {children: React.ReactNode }
@@ -31,8 +15,10 @@ const RootLayout = (
             suppressHydrationWarning={true}
             data-qb-installed="true"
         >
-            <body className={`${epiloque.variable} ${inter.variable} ${brasileiro.variable}`}>
+            <body className={Fonts}>
+                <Header />
                 {children}
+                <Footer />
             </body>
         </html>
     )
