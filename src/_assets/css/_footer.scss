@@ -1,11 +1,11 @@
-@use '_variables' as *;
+@use "_variables" as *;
 
 footer {
-    border-top: solid 1px $color-gray;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    margin-top: 64px;
-    max-width: $max-content;
-    width: 100%;
+  border-top: solid 1px $color-gray;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 64px;
+  max-width: $max-content;
+  width: 100%;
 }

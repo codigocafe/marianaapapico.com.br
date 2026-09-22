@@ -1,25 +1,25 @@
-@use '_variables' as *;
+@use "_variables" as *;
 
 body {
-    background: radial-gradient(
-        ellipse at left bottom,
-        $color-gray 0%,
-        $color-white 80%
-    );
-    margin: 0;
-    padding: 0;
+  background: radial-gradient(
+    ellipse at left bottom,
+    $color-gray 0%,
+    $color-white 80%
+  );
+  margin: 0;
+  padding: 0;
 }
 
 h2 {
-    color: $color-black;
-    font-family: $font-epilogue;
-    font-size: 24px;
-    font-weight: 600;
+  color: $color-black;
+  font-family: $font-epilogue;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 p {
-    color: $color-black;
-    font-family: $font-inter;
-    font-size: 16px;
-    font-weight: 500;
+  color: $color-black;
+  font-family: $font-inter;
+  font-size: 16px;
+  font-weight: 500;
 }
