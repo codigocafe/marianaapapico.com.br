@@ -1,11 +1,18 @@
 @use "_variables" as *;
 
 footer {
+  align-items: center;
   border-top: solid 1px $color-gray;
   display: flex;
+  height: 40px;
   justify-content: center;
   margin: auto;
   margin-top: 64px;
   max-width: $max-content;
+  padding: 0;
   width: 100%;
+
+  p {
+    margin: 0;
+  }
 }
