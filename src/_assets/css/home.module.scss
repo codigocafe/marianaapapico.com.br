@@ -1,98 +1,143 @@
-@use '_variables' as *;
-@use '_mixin' as *;
+@use "_variables" as *;
+@use "_mixin" as *;
 
 .container {
-    @include container;
+  @include container;
 }
 
 .wrapper {
-    @include wrapper;
-    align-items: flex-start;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 128px;
+  @include wrapper;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 128px;
+
+  @media (max-width: $sm) {
+    gap: 64px;
+  }
 }
 
 .frames {
-    display: flex;
-    gap: 24px;
-    justify-content: space-around;
-    width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: space-around;
+  width: 100%;
+
+  @media (max-width: $sm) {
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 .title {
-    background: linear-gradient(90deg, $color-green-dark 0%, $color-green-light 50%, $color-yellow 100%);
-    background-clip: text;
-    border-left: 4px solid $color-black;
-    font-family: $font-epilogue;
-    font-size: 92px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    line-height: 1.05;
-    margin: 0 32px;
-    opacity: .7;
-    padding: 86px 18% 86px 64px;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: linear-gradient(
+    90deg,
+    $color-green-dark 0%,
+    $color-green-light 50%,
+    $color-yellow 100%
+  );
+  background-clip: text;
+  border-left: 4px solid $color-black;
+  font-family: $font-epilogue;
+  font-size: 92px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1.05;
+  margin: 0 32px;
+  opacity: 0.7;
+  padding: 86px 18% 86px 64px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
+  &:hover {
+    cursor: pointer;
+  }
 
-    &:hover {
-        cursor: pointer;
-    }
+  @media (max-width: $sm) {
+    border-left: none;
+    font-size: 48px;
+    letter-spacing: normal;
+    margin: 0;
+    padding: 32px 16px;
+  }
 }
 
 .content {
-    background: linear-gradient(45deg, $color-green-dark 0%, $color-green-light 70%, $color-yellow 100%);
-    border-radius: 4px;
-    box-shadow: 0 12px 12px -12px $color-black;
-    padding: 86px;
+  background: linear-gradient(
+    45deg,
+    $color-green-dark 0%,
+    $color-green-light 70%,
+    $color-yellow 100%
+  );
+  border-radius: 4px;
+  box-shadow: 0 12px 12px -12px $color-black;
+  padding: 86px;
 
-    h2 {
-        color: $color-white;
-        font-size: 32px;
+  @media (max-width: $sm) {
+    border-radius: 0;
+    padding: 16px 16px 32;
+  }
+
+  h2 {
+    color: $color-white;
+    font-size: 32px;
+    @media (max-width: $sm) {
+      font-size: 28px;
+    }
+  }
+
+  p {
+    color: $color-white;
+    font-family: $font-inter;
+    font-size: 24px;
+    width: 70%;
+
+    @media (max-width: $sm) {
+      font-size: 18px;
+      width: 100%;
+    }
+  }
+
+  a {
+    box-sizing: border-box;
+    color: $color-black;
+    font-size: 18px;
+    font-family: $font-inter;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    margin-top: 32px;
+    background: $color-white;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    transition:
+      background 0.2s,
+      box-shadow 0.2s,
+      filter 0.2s;
+
+    &[target="_blank"]::after {
+      content: "";
+      display: inline-block;
+      margin-left: 10px;
+      width: 20px;
+      height: 20px;
+
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.29 5.71a1 1 0 0 1 1.41 0l5.59 5.59a1 1 0 0 1 0 1.41l-5.59 5.59a1 1 0 0 1-1.41-1.41L17.17 13H5a1 1 0 1 1 0-2h12.17l-2.88-2.88a1 1 0 0 1 0-1.41z"/></svg>');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 18px 18px;
+      vertical-align: middle;
     }
 
-    p {
-        color: $color-white;
-        font-family: $font-inter;
-        font-size: 24px;
-        width: 70%;
+    &:hover,
+    &:focus {
+      filter: brightness(1.07);
+      box-shadow: 0 6px 16px -8px $color-black;
     }
-
-    a {
-        color: $color-black;
-        font-size: 18px;
-        font-family: $font-inter;
-        font-weight: 500;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 14px 28px;
-        margin-top: 32px;
-        background: $color-white;
-        border: none;
-        border-radius: 6px;
-        text-decoration: none;
-        transition: background 0.2s, box-shadow 0.2s, filter 0.2s;
-
-    
-        &[target="_blank"]::after {
-            content: '';
-            display: inline-block;
-            margin-left: 10px;
-            width: 20px;
-            height: 20px;
-        
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.29 5.71a1 1 0 0 1 1.41 0l5.59 5.59a1 1 0 0 1 0 1.41l-5.59 5.59a1 1 0 0 1-1.41-1.41L17.17 13H5a1 1 0 1 1 0-2h12.17l-2.88-2.88a1 1 0 0 1 0-1.41z"/></svg>');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 18px 18px;
-            vertical-align: middle;
-        }
-
-        &:hover, &:focus {
-            filter: brightness(1.07);
-            box-shadow: 0 6px 16px -8px $color-black;            
-        }
-    }
+  }
 }

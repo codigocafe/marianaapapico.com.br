@@ -1,19 +1,15 @@
-import Frame from './style.module.css'
+import "@/_components/frame/style.scss";
 
-const Frames = ({src, alt}:{src: string, alt: string}) => {
-    return (
-        <>
-            <div className={Frame.border}>
-                <div className={Frame.background}>
-                    <img 
-                        src={src} 
-                        alt={alt}
-                        className={Frame.image}
-                    />
-                </div>
-            </div>
-        </>
-    )
-}
+const Frames = ({ src, alt }: { src: string; alt: string }) => {
+  return (
+    <>
+      <div className="frame_border">
+        <div className="frame_border--background">
+          <img src={src} alt={alt} className="frame_border--image" />
+        </div>
+      </div>
+    </>
+  );
+};
 
-export default Frames
+export default Frames;

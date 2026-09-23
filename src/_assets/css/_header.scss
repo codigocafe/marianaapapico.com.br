@@ -1,78 +1,76 @@
-@use '_variables' as *;
+@use "_variables" as *;
 
 header {
+  &.container {
+    align-items: stretch;
+    box-sizing: border-box;
+    display: flex;
+    gap: 16px;
+    height: 100px;
+    justify-content: flex-start;
+    margin: auto;
+    max-width: $max-content;
+    padding: 24px;
+    width: 100%;
 
-    &.container {
-        align-items: stretch;
-        box-sizing: border-box;
-        display: flex;
-        gap: 16px;
-        height: 100px;
-        justify-content: flex-start;
-        margin: auto;
-        max-width: $max-content;
-        padding: 24px;
-        width: 100%;
+    .top {
+      align-items: center;
+      display: flex;
+      gap: 16px;
+      justify-content: center;
 
-        .top {
-            align-items: center;
-            display: flex;
-            gap: 16px;
-            justify-content: center;
+      img {
+        height: 24px;
+      }
 
-            img {
-                height: 24px;
-            }
-
-            a {
-                border-left: solid 2px $color-black;
-                color: $color-black;
-                font-family: $font-brasilero;
-                font-size: 24px;
-                font-weight: 500;
-                margin: 0;
-                padding: 0 0 0 16px;
-                text-decoration: none;
-                text-transform: lowercase;
-            }
-        }
-
-        nav {
-            display: flex;
-            flex-grow: 1;
-            gap: 16px;
-            justify-content: flex-end;
-
-            a {
-                align-content: center;
-                color: $color-black;
-                cursor: pointer;
-                font-family: $font-epilogue;
-                font-size: 16px;
-                font-weight: 700;
-                padding: 0 8px;
-                position: relative;
-                text-decoration: none;
-
-                &::before {
-                    background: $color-black;
-                    bottom: 4px;
-                    content: '';
-                    display: block;
-                    height: 4px;
-                    left: 0;
-                    position: absolute;
-                    transition: all .2s;
-                    width: 0%;
-                }
-
-                &:hover {
-                    &::before {
-                        width: 100%;
-                    }
-                }
-           
-            }
-        }
+      a {
+        border-left: solid 2px $color-black;
+        color: $color-black;
+        font-family: $font-brasilero;
+        font-size: 24px;
+        font-weight: 500;
+        margin: 0;
+        padding: 0 0 0 16px;
+        text-decoration: none;
+        text-transform: lowercase;
+      }
     }
+
+    nav {
+      display: flex;
+      flex-grow: 1;
+      gap: 16px;
+      justify-content: flex-end;
+
+      a {
+        align-content: center;
+        color: $color-black;
+        cursor: pointer;
+        font-family: $font-epilogue;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 0 8px;
+        position: relative;
+        text-decoration: none;
+
+        &::before {
+          background: $color-black;
+          bottom: 4px;
+          content: "";
+          display: block;
+          height: 4px;
+          left: 0;
+          position: absolute;
+          transition: all 0.2s;
+          width: 0%;
+        }
+
+        &:hover {
+          &::before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }
