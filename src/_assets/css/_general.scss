@@ -1,11 +1,12 @@
 @use "_variables" as *;
 
+body,
+html {
+  height: 100%;
+}
+
 body {
-  background: radial-gradient(
-    ellipse at left bottom,
-    $color-gray 0%,
-    $color-white 80%
-  );
+  background: $color-white;
   margin: 0;
   padding: 0;
 }
