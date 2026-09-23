@@ -1,5 +1,10 @@
 import Link from "next/link";
 import Error from "@/_assets/css/notfound.module.scss";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Página não encontrada. Error 404",
+};
 
 const NotFound = () => {
   return (
