@@ -12,7 +12,7 @@
   flex-wrap: wrap;
   gap: 128px;
 
-  @media (max-width: $sm) {
+  @media (max-width: $lg) {
     gap: 64px;
   }
 }
@@ -25,7 +25,7 @@
   justify-content: space-around;
   width: 100%;
 
-  @media (max-width: $sm) {
+  @media (max-width: $lg) {
     align-items: center;
     flex-direction: column;
   }
@@ -55,7 +55,7 @@
     cursor: pointer;
   }
 
-  @media (max-width: $sm) {
+  @media (max-width: $lg) {
     border-left: none;
     font-size: 48px;
     letter-spacing: normal;
@@ -75,7 +75,7 @@
   box-shadow: 0 12px 12px -12px $color-black;
   padding: 86px;
 
-  @media (max-width: $sm) {
+  @media (max-width: $lg) {
     border-radius: 0;
     padding: 16px 16px 32;
   }
@@ -83,7 +83,7 @@
   h2 {
     color: $color-white;
     font-size: 32px;
-    @media (max-width: $sm) {
+    @media (max-width: $lg) {
       font-size: 28px;
     }
   }
@@ -94,7 +94,7 @@
     font-size: 24px;
     width: 70%;
 
-    @media (max-width: $sm) {
+    @media (max-width: $lg) {
       font-size: 18px;
       width: 100%;
     }
