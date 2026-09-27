@@ -1,4 +1,11 @@
 import type { Metadata, Viewport } from "next";
+import { GoogleTagManager } from "@next/third-parties/google";
+
+import { Fonts } from "@/_inc/fonts";
+import "@/_assets/css/main.scss";
+
+import Header from "@/_components/header";
+import Footer from "@/_components/footer";
 
 export const metadata: Metadata = {
   title: "Mariana Apapico | Ilustradora Infantil e Contadora de Histórias",
@@ -14,15 +21,10 @@ export const viewport: Viewport = {
   initialScale: 1.0,
 };
 
-import { Fonts } from "@/_inc/fonts";
-import "@/_assets/css/main.scss";
-
-import Header from "@/_components/header";
-import Footer from "@/_components/footer";
-
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="pt-BR" suppressHydrationWarning={true} data-qb-installed="true">
+      <GoogleTagManager gtmId="GTM-NFLWGQ64" />
       <body className={Fonts}>
         <Header />
         {children}
